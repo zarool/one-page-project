@@ -108,16 +108,20 @@ body {
 
         width: 60%;
         height: auto;
-        border: 1px solid $secondaryBg;
+        border: 2px solid $secondaryBg;
+
+        .vertical {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-areas: "header""two";
+        }
+
+        .horizontal {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "header header""one two";
+        }
 
         .content {
             display: grid;
-
-
-            grid-template-columns: repeat(2, 1fr);
-            // grid-template-rows: ;
-            grid-template-areas: "header header""one two";
-
             padding: 20px;
 
             align-items: center;
@@ -128,6 +132,9 @@ body {
                 text-align: center;
                 margin-bottom: 10px;
 
+                i {
+                    font-size: 2rem;
+                }
             }
 
             &__photo {
@@ -150,6 +157,71 @@ body {
 
         }
 
+
+        .register {
+            width: 50%;
+            display: grid;
+
+            align-items: center;
+
+            row-gap: 10px;
+            margin: 15px auto;
+
+            font-size: 1.5rem;
+
+            &__input {
+                margin: 10px 0;
+
+                input {
+                    float: right;
+                    padding: 2px;
+                    font-size: 1.5rem;
+
+                    color: $secondaryText;
+                    outline: none;
+                    border: none;
+                    border-bottom: 1px solid $secondaryText;
+                    background-color: $bg;
+
+                    &:-webkit-autofill,
+                    &:-webkit-autofill:hover,
+                    &:-webkit-autofill:focus,
+                    &:-webkit-autofill:active {
+                        -webkit-box-shadow: 0 0 0 30px $bg inset !important;
+                    }
+
+                    &:-webkit-autofill {
+                        -webkit-text-fill-color: $secondaryText !important;
+                    }
+                }
+
+                .button {
+                    cursor: pointer;
+                    padding: 10px;
+
+                    display: flex;
+                    justify-content: center;
+
+                    border: 1px solid $text;
+                    color: $text;
+
+                    transition: 0.5s all;
+
+                    &:hover {
+                        border: 1px solid $addColor;
+                        color: $addColor;
+                    }
+
+                    &:active {
+                        transition: none;
+
+                        color: $text;
+                        background-color: rgba($color: $addColor, $alpha: 0.9);
+                    }
+                }
+            }
+        }
+
     }
 
     .header {
@@ -165,6 +237,16 @@ body {
         height: auto;
         float: left;
         transform: translateX(76%);
+
+        ul {
+            padding: 10px 20px;
+            font-size: 1.1rem;
+            letter-spacing: 0.05rem;
+
+            li {
+                margin: 5px 0;
+            }
+        }
     }
 
     .right {

@@ -1,84 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Klub szachowy</title>
-    <link rel="stylesheet" href="./assets/style/main.css" />
-    <script
-      src="https://kit.fontawesome.com/220bfbd1f5.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      rel="shortcut icon"
-      href="./assets/icon/favicon.svg"
-      type="image/x-icon"
-    />
-  </head>
 
-  <body>
-    <div class="front">
-      <div class="front__menu">
-        <a href="#">Początek</a>
-        <a href="#register">Zapisy</a>
-        <a href="#contact">Kontakt</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Klub szachowy</title>
+  <link rel="stylesheet" href="./assets/style/main.css" />
+  <script src="https://kit.fontawesome.com/220bfbd1f5.js" crossorigin="anonymous"></script>
+  <link rel="shortcut icon" href="./assets/icon/favicon.svg" type="image/x-icon" />
+</head>
+
+<body>
+  <div id="begin" class="front">
+    <div class="front__menu">
+      <a href="#begin">Początek</a>
+      <a href="#register">Zapisy</a>
+      <a href="#contact">Kontakt</a>
+    </div>
+    <div class="front__title">
+      <h1>Zostań mistrzem <span>szachów</span></h1>
+      <a href="#register">Zapisz się już teraz</a>
+    </div>
+    <div class="front__social-media">
+      <div class="link">
+        <a href="https://instagram.com" target="blank" title="instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
-      <div class="front__title">
-        <h1>Zostań mistrzem <span>szachów</span></h1>
-        <a href="#register">Zapisz się już teraz</a>
+      <div class="link">
+        <a href="https://youtube.com" target="blank" title="youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
       </div>
-      <div class="front__social-media">
-        <div class="link">
-          <a href="https://instagram.com" target="blank" title="instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
+      <div class="link">
+        <a href="https://lichess.org" target="blank" title="lichess">
+          <i class="fas fa-chess-pawn"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="space"></div>
+
+    <!-- pierwszy -->
+
+    <div class="box">
+      <div class="content horizontal">
+        <div class="content__title">
+          <h2>Obecny mistrz świata:</h2>
         </div>
-        <div class="link">
-          <a href="https://youtube.com" target="blank" title="youtube">
-            <i class="fab fa-youtube"></i>
-          </a>
+        <div class="content__photo">
+          <img src="./assets/images/magnus.jpg" alt="" />
         </div>
-        <div class="link">
-          <a href="https://lichess.org" target="blank" title="lichess">
-            <i class="fas fa-chess-pawn"></i>
-          </a>
+        <div class="content__info">
+          <b><span>Sven Magnus Øen Carlsen </span></b><br />
+          (ur. 30 listopada 1990 w Tønsbergu) <br />
+          Norweski szachista, arcymistrz od 2004. Aktualny mistrz świata w
+          szachach.
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="space"></div>
+    <!-- ZAPISY -->
 
-      <div class="box">
-        <div class="content">
-          <div class="content__title"><h2>Obecny mistrz świata:</h2></div>
-          <div class="content__photo">
-            <img src="./assets/images/magnus.jpg" alt="" />
+    <div class="space"></div>
+    <div class="header" id="register">Zapisz się!</div>
+    <div class="left box">
+      <ul>
+        <li>zapisy trwają <span>cały rok</span></li>
+
+        <li>możesz przystąpić w każdym wieku</li>
+        <li>są <span>darmowe</span></li>
+        <li>liczy się uprzejmość i chęć <span>samorozwoju</span></li>
+      </ul>
+    </div>
+    <div class="half-space"></div>
+    <div class="box">
+      <form action="" autocomplete="off">
+        <div class="register">
+          <div class="register__input">
+            <label for="fname">Imię:</label>
+            <input type="text" name="" id="fname" placeholder="Wpisz imię">
           </div>
-          <div class="content__info">
-            <b><span>Sven Magnus Øen Carlsen </span></b><br />
-            (ur. 30 listopada 1990 w Tønsbergu) <br />
-            Norweski szachista, arcymistrz od 2004. Aktualny mistrz świata w
-            szachach.
+
+          <div class="register__input">
+            <label for="lname">Nazwisko:</label>
+            <input type="text" name="" id="lname" placeholder="Wpisz nazwisko">
+          </div>
+
+          <div class="register__input">
+            <label for="email">E-mail:</label>
+            <input type="email" name="" id="email" placeholder="Wpisz swój mail">
+          </div>
+
+          <div class="register__input">
+            <div class="button">Wyślij!</div>
           </div>
         </div>
-      </div>
-
-      <div class="space"></div>
-      <div class="space"></div>
-
-      <div class="header">O nas</div>
-      <div class="left box">fajna</div>
-      <div class="right box">stronka</div>
-      <br />
-      <br />
-      <div class="left box">tutaj</div>
-      <div class="right box">jest</div>
-
-      <div class="space"></div>
-      <div class="space"></div>
-      <h1 id="register">zapisy</h1>
+      </form>
     </div>
-    <script src="./script/index.js"></script>
-  </body>
+
+    <!-- O NAS -->
+
+
+    <div class="space"></div>
+    <div class="header" id="contact">O nas</div>
+
+    <!-- jeden -->
+
+    <div class="left box">
+      <div class="content vertical">
+        <div class="content__title">
+          <i class=" fas fa-envelope"></i>
+        </div>
+        <div class="content__info">
+          <p>Możesz do nas szybko napisać poprzez wysłanie nam wiadomości na mail: <span>klub@szachowy.pl</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- dwa -->
+
+    <div class="right box">
+      <div class="content vertical">
+        <div class="content__title">
+          <i class=" fas fa-calendar-alt"></i>
+        </div>
+        <div class="content__info">
+          <p>Jesteśmy <span>przystępni</span> - przyjmiemy każdego zawodnika w każdym wieku!</p>
+        </div>
+      </div>
+    </div>
+    <div class="space"></div>
+
+    <!-- trzy -->
+
+    <div class="left box">
+      <div class="content vertical">
+        <div class="content__title">
+          <i class=" fas fa-chess-board"></i>
+        </div>
+        <div class="content__info">
+          <p>Szybkie kursy oraz pojedynki z <span>profesjonalnymi</span> graczami</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- cztery -->
+
+    <div class="right box">
+      <div class="content vertical">
+        <div class="content__title">
+          <i class=" fas fa-map-marked"></i>
+        </div>
+        <div class="content__info">
+          <p><span>Świetne</span> ulokowanie! Znajdujemy się w centrum miasta, dzięki czemu szybko nas znajdziesz</p>
+        </div>
+      </div>
+    </div>
+    <div class="space"></div>
+
+    <!-- koniec -->
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="./script/index.js"></script>
+</body>
+
 </html>
