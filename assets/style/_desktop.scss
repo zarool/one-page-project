@@ -145,6 +145,10 @@ body {
                 grid-area: two;
                 line-height: 30px;
                 letter-spacing: 0.15rem;
+
+                a {
+                    color: $addColor;
+                }
             }
         }
 
@@ -247,26 +251,6 @@ body {
         transform: translateX(-76%);
     }
 
-    .aditional-links {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-
-        &__section {
-            margin: 30px auto;
-
-            display: grid;
-            gap: 10px;
-            align-items: center;
-            justify-items: start;
-
-            a {
-                float: left;
-                text-decoration: none;
-                color: $secondaryText;
-            }
-        }
-    }
-
     .footer {
         width: 100%;
         padding: 20px 0;
@@ -274,4 +258,28 @@ body {
         text-align: center;
         background-color: $bg;
     }
+
+    .aditional-links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        &__section {
+            margin: 30px auto;
+
+            display: flex;
+            flex-direction: column;
+
+
+            a {
+                text-align: left;
+                padding: 10px;
+                float: left;
+                text-decoration: none;
+                color: $secondaryText;
+            }
+        }
+    }
 }
+
+
+@import "desktop_media";
